@@ -1,4 +1,5 @@
 
+---
 # Permission Module DDD Refactoring Plan (Final)
 
 이 문서는 사용자가 제공한 **`permission` 패키지의 DDD 폴더 구조**를 기반으로, **기존** **GroupFunction의 역할을 Permission으로 대체**하는 구현 계획입니다.

@@ -10,7 +10,7 @@
 - \*\*파라미터 추출\*\*:
         build.gradle의 `-parameters` 옵션 덕분에, AOP는 메서드 파라미터 이름("companyId")을 정확히 인식함      
         ScopeCheckParser는 이름 기반으로 파라미터 값(`5`, `6`)을 추출합니다. (SpEL 제거로 단순화됨)
-- **검증 요청**: 추출된 `companyId(5)`와 `jobTypeId(6)`를 ScopeChecker에게 넘김
+- \*\*검증 요청\*\*: 추출된 `companyId(5)`와 `jobTypeId(6)`를 ScopeChecker에게 넘김
 
 #### 3. 권한 검증 (ScopeChecker)
 
@@ -26,6 +26,6 @@
     - **YES**: 통과 (Return)
     - **NO**: 차단 (`IllegalArgumentException` 발생 -> 400/403 응답)
 
-#### **4. 비즈니스 로직 (SettlementService)**
+#### 4. 비즈니스 로직 (SettlementService)
 
 - 검증을 통과했다면 급여 로직이 실행

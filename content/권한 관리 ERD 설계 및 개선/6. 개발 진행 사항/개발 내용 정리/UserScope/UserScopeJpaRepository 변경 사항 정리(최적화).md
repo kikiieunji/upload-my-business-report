@@ -16,14 +16,14 @@
 	
 	
 	
-		- \*\*변경 후\*\*
-			```SQL
-			SELECT ... 
-			FROM user_scope us 
-			JOIN user_department_position udp ON ...
-			-- User 테이블 조인 없이 바로 비교
-			WHERE udp.user_id = ?
-			```
+	- \*\*변경 후\*\*
+		```SQL
+		SELECT ... 
+		FROM user_scope us 
+		JOIN user_department_position udp ON ...
+		-- User 테이블 조인 없이 바로 비교
+		WHERE udp.user_id = ?
+		```
 	
 	- 하이버네이트는 조회/비교하려는 속성이 연관관계의 주인(FK)에 이미 있는지를 확인
 	- userDepartmentPosition 테이블에 user_id컬럼이 있으니 User 테이블을 조인해서 id를 확인할 필요가 없다는 것을 알고 쿼리를 최적화 해줌

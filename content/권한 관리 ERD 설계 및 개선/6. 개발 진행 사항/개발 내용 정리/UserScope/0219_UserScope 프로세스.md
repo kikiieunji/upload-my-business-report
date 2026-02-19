@@ -15,16 +15,16 @@
 #### 3. 권한 검증 (ScopeChecker)
 
 - \*\*Target 확인\*\*:
-    - "조회하려는 직군(jobTypeId=6)이 뭐지?" -> **`EXECUTIVE` (임원직)**
-    - "임원직이 아니면 통과, 임원직이면 검사" -> **검사 필요**
+    - "조회하려는 직군(jobTypeId=6)이 뭐지?" -> \*\*`EXECUTIVE` (임원직)\*\*
+    - "임원직이 아니면 통과, 임원직이면 검사" -> \*\*검사 필요\*\*
 - \*\*내 권한 조회 (Query)\*\*:
-    - "사용자(`userId`)가 5번 회사(`companyId`)에서 가진 **모든 직책(UDP)**을 뒤져보자."
+    - "사용자(`userId`)가 5번 회사(`companyId`)에서 가진 \*\*모든 직책(UDP)\*\* 을 뒤져보자."
     - "그 직책들에 부여된 권한(`user_scope`) 목록을 다 가져와!"
-    - **최적화된 쿼리**: `Hibernate`가 User 테이블 조인 없이 `UDP` 테이블의 FK만으로 빠르게 조회
+    - \*\*최적화된 쿼리\*\*: `Hibernate`가 User 테이블 조인 없이 `UDP` 테이블의 FK만으로 빠르게 조회
 - \*\*판결\*\*:
     - "내 권한 목록에 `EXECUTIVE`가 있는가?"
-    - **YES**: 통과 (Return)
-    - **NO**: 차단 (`IllegalArgumentException` 발생 -> 400/403 응답)
+    - \*\*YES\*\*: 통과 (Return)
+    - \*\*NO\*\*: 차단 (`IllegalArgumentException` 발생 -> 400/403 응답)
 
 #### 4. 비즈니스 로직 (SettlementService)
 
